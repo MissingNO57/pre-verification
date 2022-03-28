@@ -34,8 +34,13 @@ thiserror = { version = "1.0.24" }
 
 # FRAGMENT_VERIFICATION
 #umbral-pre = { git = "https://github.com/MissingNO57/rust-umbral", package = "umbral-pre", branch = "capricorn_wasm", default-features = false }
+
+# Cannot deploy - requires wbingen unsupported by VM
+umbral-pre = { git = "https://github.com/kitounliu/rust-umbral", package = "umbral-pre", default-features = false }
+#umbral-pre = {path = "/home/jiri/fetch/rust-umbral/umbral-pre", package = "umbral-pre" }
+
+# Requires signature v1.2 - cannot compile because of dependency issue
 #umbral-pre = { git = "https://github.com/kitounliu/rust-umbral", package = "umbral-pre", branch = "wasm", default-features = false }
-umbral-pre = {path = "/home/jiri/fetch/rust-umbral/umbral-pre", package = "umbral-pre" }
 
 base64 = { version = "0.13", default-features = false, features = ["alloc"] }
 
